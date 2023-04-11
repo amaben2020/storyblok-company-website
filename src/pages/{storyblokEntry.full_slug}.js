@@ -17,7 +17,7 @@ const StoryblokEntry = ({ data }) => {
       ? story.content.body.map((blok) => (
           <StoryblokComponent blok={blok} key={blok._uid} />
         ))
-      : story.content.header_menu.map((e) => e.name);
+      : story.content?.header_menu?.map((e) => e.name);
 
   return (
     <Layout>
