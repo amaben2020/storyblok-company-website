@@ -1,0 +1,47 @@
+import { graphql } from "gatsby";
+import * as React from "react";
+
+import {
+  StoryblokComponent,
+  storyblokEditable,
+  useStoryblokState,
+} from "gatsby-source-storyblok";
+import Layout from "../../components/layout";
+
+const StoryblokEntry = ({ data }) => {
+  let story = data.storyblokEntry;
+  story = useStoryblokState(story);
+
+  const components =
+    !story.name === "Config"
+      ? story.content.body.map((blok) => (
+          <StoryblokComponent blok={blok} key={blok._uid} />
+        ))
+      : story.content.header_menu.map((e) => e.name);
+
+  return (
+    <Layout>
+      <div {...storyblokEditable(story.content)}>
+        <h1>{story.name}</h1>
+        {components}
+      </div>
+    </Layout>
+  );
+};
+
+export default StoryblokEntry;
+
+export const query = graphql`
+  query ($full_slug: String!) {
+    storyblokEntry(full_slug: { eq: $full_slug }) {
+      content
+      name
+      full_slug
+      uuid
+      id
+      internalId
+    }
+  }
+`;
+
+// Alternative to Gatsby node page generation via template - https://www.gatsbyjs.com/docs/reference/routing/file-system-route-api/

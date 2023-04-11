@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-    <img alt="Gatsby" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Storyblok_Primary_Full.svg/1600px-Storyblok_Primary_Full.svg.png?20171023233256" width="60" />
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="40" />
+    <img alt="Gatsby" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Storyblok_Primary_Full.svg/1600px-Storyblok_Primary_Full.svg.png?20171023233256" width="360" />
 
   </a>
 </p>
